@@ -69,8 +69,8 @@ app.get('/weather',(req,res)=> {
             }
            
              res.send({
-                 forecast:forecastData,
-                 address:req.query.address
+                 forecast:forecastData.forecast,
+                 address:forecastData.address
              })
 
          }) // end forcast callback function.

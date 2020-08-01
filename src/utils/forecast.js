@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (data.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, data.current.temperature + ' degress out.')
+            callback(undefined, {forecast:data.current.temperature + ' degress out.',address:data.location.region })
         }
     })
 }
