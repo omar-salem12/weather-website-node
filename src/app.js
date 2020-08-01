@@ -6,6 +6,7 @@ const forecast =  require('./utils/forecast');
 
 const app = express();
 
+const port = process.env.PORT || 3000
 // Define paths for Express config
 const pathOfDirectoryPublic = path.join(__dirname,'../public');
 const viewPath = path.join(__dirname,'../templates/views');
@@ -101,6 +102,6 @@ app.get('*',(req,res)=> {
         errorMessage:'page not found.'
     })
 })
-app.listen(3000,()=>{
-     console.log('seve is run!');
+app.listen(port,()=>{
+     console.log('sever is run!');
 })
